@@ -13,8 +13,9 @@ end
     i = 0
     new_tas = []
     while i < tas.length
-    
-    new_tas << yield(tas[i])
+    tas.each do |ta|
+    yield(tas[i])
+    new_tas = tas
     i = i + 1
   end
 end
